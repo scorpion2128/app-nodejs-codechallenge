@@ -1,0 +1,12 @@
+export const TRANSACTION_STATUSES = {
+  PENDING: 'PENDING',
+  APPROVED: 'APPROVED',
+  REJECTED: 'REJECTED',
+} as const;
+
+export type TransactionStatus =
+  (typeof TRANSACTION_STATUSES)[keyof typeof TRANSACTION_STATUSES];
+
+export const ALLOWED_TRANSACTION_STATUSES = Object.values(TRANSACTION_STATUSES);
+
+export const MAX_ALLOWED_TRANSACTION_VALUE = 1000;
